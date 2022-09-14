@@ -1,0 +1,12 @@
+<div class="mt-2 container d-flex justify-content-center">
+  <button type="button" class="btn btn-success">Listar Episodios</button>
+</div>
+<div class="container">
+   <app-card *ngFor ="let episodio of listEpisodios">
+    <div class="titulo">{{episodio.name}}</div>
+    <div class="subtitulo">{{episodio.air_date}}</div>
+   </app-card>
+</div>
+
+
+
