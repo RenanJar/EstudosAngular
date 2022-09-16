@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ComponenteTesteComponent } from './componente-teste/componente-teste.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CardComponent } from './card/card.component';
+import { AcordionComponent } from './card/acordion/acordion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ComponenteTesteComponent,
     NavbarComponent,
-    CardComponent
+    CardComponent,
+    AcordionComponent
   ],
   imports: [
     BrowserModule,

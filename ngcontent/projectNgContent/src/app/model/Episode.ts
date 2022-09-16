@@ -6,7 +6,7 @@ export class Episode{
     name:string = ""
     air_date:string = ""
     episode:string = ""
-    Characters : Characters[] = []
+    characters:string[] = []
     url:string = ""
     created:string = ""
 }
