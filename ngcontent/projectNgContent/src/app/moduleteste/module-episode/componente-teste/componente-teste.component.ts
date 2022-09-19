@@ -1,6 +1,7 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { Episode } from '../model/Episode';
-import { ServiceService } from '../service/service.service';
+import { Episode } from 'src/app/model/Episode';
+import { ServiceService } from 'src/app/service/service.service';
+
 
 @Component({
   selector: 'app-componente-teste',
