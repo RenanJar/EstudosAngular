@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { usuarioLogin } from 'src/app/model/usuarioLogin';
 
 @Component({
   selector: 'app-big-component',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./big-component.component.css']
 })
 export class BigComponentComponent implements OnInit {
+
+  usuarioLogin:usuarioLogin = new usuarioLogin
 
   constructor() { }
 

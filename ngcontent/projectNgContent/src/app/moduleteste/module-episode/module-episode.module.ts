@@ -5,6 +5,7 @@ import { ModuleEpisodeRoutingModule } from './module-episode-routing.module';
 import { ComponenteTesteComponent } from './componente-teste/componente-teste.component';
 import { CardComponent } from 'src/app/card/card.component';
 import { AcordionComponent } from 'src/app/card/acordion/acordion.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 
 @NgModule({

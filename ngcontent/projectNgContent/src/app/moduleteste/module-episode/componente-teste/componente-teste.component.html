@@ -1,5 +1,6 @@
 <div class="mt-2 container d-flex justify-content-center">
-  <button type="button" class="btn btn-success" (click)="getAllEpisodios()">Listar Episodios</button>
+  <button type="button" class="btn btn-success ms-2" (click)="getAllEpisodios()">Listar Episodios</button>
+  <button type="button" class="btn btn-success ms-2" routerLink="/charactersRoute">Listar Personagens</button>
 </div>
 <div class="container" *ngIf="listEpisodios.length >0; else noList">
    <app-card *ngFor ="let episodio of listEpisodios; let i = index">
