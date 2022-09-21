@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { usuarioLogin } from 'src/app/model/usuarioLogin';
+import { UserServiceService } from 'src/app/service/authenticationService/user-service.service';
 
 @Component({
   selector: 'app-big-component',
@@ -8,11 +10,18 @@ import { usuarioLogin } from 'src/app/model/usuarioLogin';
 })
 export class BigComponentComponent implements OnInit {
 
-  usuarioLogin:usuarioLogin = new usuarioLogin
+  loginUsuarioForm!: FormGroup;
 
-  constructor() { }
+  constructor(private userService:UserServiceService,
+      private userFormBuilder:FormBuilder,) {
+
+      }
 
   ngOnInit(): void {
+    this.loginUsuarioForm = this.userFormBuilder.group({
+      usuario:[''],
+      senha:['']
+    })
   }
 
 }
