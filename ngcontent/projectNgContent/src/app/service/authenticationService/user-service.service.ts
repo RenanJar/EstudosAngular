@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { usuarioLogin } from 'src/app/model/usuarioLogin';
 import { catchError, map, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { Postagem } from 'src/app/model/Postagem';
 
 @Injectable({
   providedIn: 'root'
@@ -26,17 +27,25 @@ export class UserServiceService {
     ) 
   };
 
-  private getToken():string | null{
+  public getAll():Observable<Postagem[]>{
+    return this.http.get<Postagem[]>('https://blogpspring.herokuapp.com/postagens')
+  }
+
+  public getToken():string | null{
     return localStorage.getItem(environment.token);
   }
 
-  private setTokenLocalStorage(respose: usuarioLogin){
+  public setTokenLocalStorage(respose: usuarioLogin){
     const usuarioToken:usuarioLogin = respose;
     localStorage.setItem(environment.token, usuarioToken.token)
   }
 
-  private removerTokenLocalStorage():void{
+  public removerTokenLocalStorage():void{
     localStorage.removeItem(environment.token)
+  }
+
+  public tokenIsValid():boolean{
+    return localStorage.getItem(environment.token) === null;
   }
   
 }
