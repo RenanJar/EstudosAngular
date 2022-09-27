@@ -18,6 +18,10 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
     CommonModule,
     HttpClientModule,
     ModuleEpisodeRoutingModule
+  ],
+  exports:[
+    CardComponent
   ]
 })
-export class ModuleEpisodeModule { }
+export class ModuleEpisodeModule {
+}

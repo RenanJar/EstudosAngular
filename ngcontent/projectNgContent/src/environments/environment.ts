@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   baseUrl : "https://blogpspring.herokuapp.com/usuarios",
-  token: 'token'
+  token: ''
 
 };
 

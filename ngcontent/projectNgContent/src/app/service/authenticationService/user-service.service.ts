@@ -25,10 +25,15 @@ export class UserServiceService {
       throw 'falha ao efetuar login'
     })
     ) 
+
   };
 
   public getAll():Observable<Postagem[]>{
     return this.http.get<Postagem[]>('https://blogpspring.herokuapp.com/postagens')
+  }
+
+  public postPostagem(postagem: Postagem):Observable<Postagem>{
+    return this.http.post<Postagem>('https://blogpspring.herokuapp.com/postagens',postagem)
   }
 
   public getToken():string | null{
@@ -36,8 +41,7 @@ export class UserServiceService {
   }
 
   public setTokenLocalStorage(respose: usuarioLogin){
-    const usuarioToken:usuarioLogin = respose;
-    localStorage.setItem(environment.token, usuarioToken.token)
+    localStorage.setItem(environment.token, respose.token)
   }
 
   public removerTokenLocalStorage():void{

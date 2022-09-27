@@ -5,18 +5,21 @@ import { ModuleCharactersRoutingModule } from './module-characters-routing.modul
 import { ModuleCharactersComponent } from './module-characters.component';
 import { BigComponentComponent } from './big-component/big-component.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CardComponent } from 'src/app/card/card.component';
+import { ModuleEpisodeModule } from '../module-episode/module-episode.module';
 
 
 @NgModule({
   declarations: [
     ModuleCharactersComponent,
-    BigComponentComponent
+    BigComponentComponent,
   ],
   imports: [
     CommonModule,
     ModuleCharactersRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ModuleEpisodeModule
   ]
 })
 export class ModuleCharactersModule { }
